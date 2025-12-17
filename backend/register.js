@@ -1,4 +1,7 @@
 function registerEvent(user, event) {
-  return `${user} registered for ${event}`;
+  if (!user || !event) {
+    return "Invalid input";
+  }
+  return `${user} successfully registered for ${event}`;
 }
 module.exports = registerEvent;
